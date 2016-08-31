@@ -1,5 +1,5 @@
 #include "XyzMeshWriter.h"
-#include <iostream>;
+#include <iostream>
 #include <fstream>
 
 using namespace std;
@@ -14,7 +14,7 @@ XyzMeshWriter::~XyzMeshWriter()
 {
 }
 
-void XyzMeshWriter::writeDepthToMeshfile(const char* fileName, const unsigned char* depthData, const unsigned char* colorData, bool cullBlack, int width, int height){
+int XyzMeshWriter::writeDepthToMeshfile(const char* fileName, const unsigned char* depthData, const unsigned char* colorData, bool cullBlack, int width, int height){
 	float minX = -1.0f, maxX = 1.0f, minY = -1.0f, maxY = 1.0f, minZ = 0.0f, maxZ = 1.0f;
 	ofstream  os;
 	os.open(fileName, ios::out);
@@ -34,4 +34,5 @@ void XyzMeshWriter::writeDepthToMeshfile(const char* fileName, const unsigned ch
 		++currPixel;
 	}
 	os.close();
+	return os.good();
 }

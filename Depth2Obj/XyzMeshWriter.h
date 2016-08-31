@@ -6,6 +6,6 @@ class XyzMeshWriter :
 public:
 	XyzMeshWriter();
 	~XyzMeshWriter();
-	void writeDepthToMeshfile(const char* fileName, const unsigned char* depthData, const unsigned char* colorData = 0, bool cullBlack = false, int width = 640, int height = 480);
+	int writeDepthToMeshfile(const char* fileName, const unsigned char* depthData, const unsigned char* colorData = 0, bool cullBlack = false, int width = 640, int height = 480);
 };
 
