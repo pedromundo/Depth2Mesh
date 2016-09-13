@@ -10,7 +10,7 @@ MeshWriter::~MeshWriter()
 {
 }
 
-float MeshWriter::interpolate(float a, float b, float coefficient)
+double MeshWriter::interpolate(double a, double b, double coefficient)
 {
 	return a + coefficient * (b - a);
 }
