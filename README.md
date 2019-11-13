@@ -1,4 +1,4 @@
-##Note: V2 (still) coming soon with several improvements
+##Note: V2 (still) coming soon with several improvements (as of 2019 :P)
 # Depth2Mesh
 A tool to convert Grayscale depth maps to various mesh/point cloud formats. I began development on this because I couldn't find a tool or library to get a nice meaty point cloud off depth images, using photoshop/maya/etc usually ended up discarding a lot of info from the depth image.
 
